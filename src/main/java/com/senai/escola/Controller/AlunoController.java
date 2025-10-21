@@ -44,7 +44,7 @@ public class AlunoController {
     }
 
     @PutMapping("/{id}")
-    public Aluno atualizarProfessores(@PathVariable Long id, @RequestBody Aluno novoAluno) {
+    public Aluno atualizarAluno(@PathVariable Long id, @RequestBody Aluno novoAluno) {
 
         Aluno verificaAluno = alunoService.buscarAlunoId(id);
         if (verificaAluno == null)

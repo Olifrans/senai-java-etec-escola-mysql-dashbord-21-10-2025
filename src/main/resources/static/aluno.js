@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
           carregarAlunos();
         });
     }
+    console.log(excluirAluno);
   };
 
   // Inicializar
