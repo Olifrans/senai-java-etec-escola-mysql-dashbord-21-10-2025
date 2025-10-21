@@ -1,0 +1,30 @@
+{
+    "2025": {
+      "matriculas": [12, 25, 40, 60, 80, 95, 100, 105, 110, 115, 118, 120],
+      "cards": { "matriculas": 120, "pendentes": 3, "professores": 15, "cursos": 8 },
+      "alerts": [
+        "3 alunos pendentes de matrícula",
+        "Novo curso de Tecnologia cadastrado",
+        "Professor João aguardando aprovação"
+      ]
+    },
+    "2024": {
+      "matriculas": [10, 20, 30, 50, 70, 85, 90, 95, 100, 105, 108, 110],
+      "cards": { "matriculas": 110, "pendentes": 5, "professores": 14, "cursos": 7 },
+      "alerts": [
+        "5 alunos pendentes de matrícula",
+        "Novo curso de Gestão aberto",
+        "Professor Maria aguardando aprovação"
+      ]
+    },
+    "2023": {
+      "matriculas": [8, 15, 25, 35, 50, 65, 70, 75, 80, 90, 95, 100],
+      "cards": { "matriculas": 100, "pendentes": 2, "professores": 12, "cursos": 6 },
+      "alerts": [
+        "2 alunos pendentes de matrícula",
+        "Curso de Indústria lotado",
+        "Professor Paulo transferido"
+      ]
+    }
+  }
+  

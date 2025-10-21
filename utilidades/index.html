@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Escolar</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>📊 Dashboard Escolar - SENAI</header>
+
+  <main>
+    <!-- Cards -->
+    <section class="cards">
+      <div class="card"><h2 id="matriculas">0</h2><p>Matrículas Ativas</p></div>
+      <div class="card"><h2 id="pendentes">0</h2><p>Pendentes</p></div>
+      <div class="card"><h2 id="professores">0</h2><p>Professores</p></div>
+      <div class="card"><h2 id="cursos">0</h2><p>Cursos</p></div>
+    </section>
+
+    <!-- Filtro -->
+    <section class="filter">
+      <label for="ano">Selecione o Ano: </label>
+      <select id="ano">
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+      </select>
+    </section>
+
+    <!-- Gráfico -->
+    <section class="chart-container">
+      <canvas id="graficoMatriculas"></canvas>
+    </section>
+
+    <!-- Notificações -->
+    <section class="alerts">
+      <h3>🔔 Notificações</h3>
+      <div id="lista-alertas"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
