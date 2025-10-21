@@ -1,0 +1,3187 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Document</title>-->
+
+<!--    <link rel="stylesheet" href="./style.css">-->
+
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container">-->
+<!--    <h1>Alunos Cadastrados</h1>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>Nome</th>-->
+<!--            <th>Email</th>-->
+<!--            <th>Telefone</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="aluno-tbody">-->
+<!--        &lt;!&ndash; Os dados dos alunos vão aparecer aqui &ndash;&gt;-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</div>-->
+
+<!--<script src="script.js"></script>-->
+
+
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Segunda-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Senai Java</title>-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+
+<!--    <style>-->
+<!--        /* Navbar compacta */-->
+
+<!--          .navbar {-->
+<!--        padding-top: 5px !important;-->
+<!--        padding-bottom: 5px !important;-->
+<!--        }-->
+<!--        .navbar-brand img {-->
+<!--          max-height: 80px;-->
+<!--        }-->
+<!--    </style>-->
+
+<!--</head>-->
+<!--<body>-->
+
+
+
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-danger py-2">-->
+<!--    <div class="container-fluid">-->
+
+<!--        <a class="navbar-brand" href="index.html">-->
+<!--            <img src="https://desenvolveitapevi.wordpress.com/wp-content/uploads/2016/02/logo-senai1.png" alt="Logo Senai">-->
+<!--        </a>-->
+
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"-->
+<!--                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+
+<!--        <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--            <ul class="navbar-nav ms-auto">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>-->
+<!--                </li>-->
+
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="./professor.html">Professor</a>-->
+<!--                </li>-->
+
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="./aluno.html">Aluno</a>-->
+<!--                </li>-->
+
+
+<!--&lt;!&ndash;                <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="nav-link" href="login.html">Login</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+
+<!--&lt;!&ndash; Carrossel &ndash;&gt;-->
+<!--<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">-->
+<!--    <div class="carousel-inner">-->
+<!--        <div class="carousel-item active">-->
+<!--            <img src="https://picsum.photos/id/1011/1200/400" class="d-block w-100" alt="Imagem 1">-->
+<!--        </div>-->
+<!--        <div class="carousel-item">-->
+<!--            <img src="https://picsum.photos/id/1015/1200/400" class="d-block w-100" alt="Imagem 2">-->
+<!--        </div>-->
+<!--        <div class="carousel-item">-->
+<!--            <img src="https://picsum.photos/id/1016/1200/400" class="d-block w-100" alt="Imagem 3">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">-->
+<!--        <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--        <span class="visually-hidden">Anterior</span>-->
+<!--    </button>-->
+<!--    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">-->
+<!--        <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--        <span class="visually-hidden">Próximo</span>-->
+<!--    </button>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Conteúdo &ndash;&gt;-->
+<!--<div class="container text-center mt-5">-->
+<!--    <h1>Bem-vindo ao Sistema Senai Java</h1>-->
+<!--    <p class="lead">Gerenciamento de Professores e Alunos</p>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;&lt;!&ndash;Sistema escolar com dashboard com estrutura moderna para gerenciamento de professores, alunos, turmas etc.&ndash;&gt;&ndash;&gt;-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+
+
+<!--    <style>-->
+
+
+<!--        body {-->
+<!--          font-family: Arial, sans-serif;-->
+<!--          background-color: #f5f6fa;-->
+<!--        }-->
+<!--        .sidebar {-->
+<!--          min-height: 100vh;-->
+<!--          background-color: #dc3545;-->
+<!--          color: #fff;-->
+<!--        }-->
+<!--        .sidebar a {-->
+<!--          color: #fff;-->
+<!--          text-decoration: none;-->
+<!--          display: block;-->
+<!--          padding: 10px 15px;-->
+<!--          border-radius: 8px;-->
+<!--          margin-bottom: 5px;-->
+<!--        }-->
+<!--        .sidebar a:hover, .sidebar a.active {-->
+<!--          background-color: #b52b38;-->
+<!--        }-->
+<!--        .content {-->
+<!--          padding: 20px;-->
+<!--        }-->
+<!--        .card {-->
+<!--          border-radius: 15px;-->
+<!--        }-->
+
+
+
+
+<!--    </style>-->
+
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">-->
+<!--            <h4 class="mb-4">📚 Senai Java</h4>-->
+<!--            <a href="./index.html" class="active">🏠 Dashboard</a>-->
+<!--            <a href="./professor.html">👨‍🏫 Professores</a>-->
+<!--            <a href="./aluno.html">👨‍🎓 Alunos</a>-->
+<!--            <a href="./turma.html">📘 Turmas</a>-->
+<!--            <a href="./disciplina.html">📑 Disciplinas</a>-->
+<!--            <a href="#">⚙️ Configurações</a>-->
+<!--            <a href="login.html">🔑 Logout</a>-->
+<!--        </nav>-->
+
+<!--        &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--        <main class="col-md-9 ms-sm-auto col-lg-10 content">-->
+<!--            <h2 class="mb-4">Bem-vindo ao Sistema Escolar</h2>-->
+
+<!--            <div class="row">-->
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Professores</h5>-->
+<!--                            <p class="display-6">12</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Alunos</h5>-->
+<!--                            <p class="display-6">240</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Turmas</h5>-->
+<!--                            <p class="display-6">8</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráfico ou tabela futura &ndash;&gt;-->
+<!--            <div class="card shadow p-3">-->
+<!--                <h5>Últimos cadastros</h5>-->
+<!--                <table class="table table-striped">-->
+<!--                    <thead>-->
+<!--                    <tr>-->
+<!--                        <th>Nome</th>-->
+<!--                        <th>Tipo</th>-->
+<!--                        <th>Data</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                    <tr>-->
+<!--                        <td>Maria Souza</td>-->
+<!--                        <td>Aluno</td>-->
+<!--                        <td>22/09/2025</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>João Silva</td>-->
+<!--                        <td>Professor</td>-->
+<!--                        <td>20/09/2025</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Turma Java 01</td>-->
+<!--                        <td>Turma</td>-->
+<!--                        <td>18/09/2025</td>-->
+<!--                    </tr>-->
+<!--                    </tbody>-->
+<!--                </table>-->
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+<!--Com expansão !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            background-color: #f5f6fa;-->
+<!--            transition: all 0.3s;-->
+<!--        }-->
+
+<!--        /* Sidebar */-->
+<!--        .sidebar {-->
+<!--            min-height: 100vh;-->
+<!--            background-color: #dc3545;-->
+<!--            color: #fff;-->
+<!--            transition: all 0.3s;-->
+<!--            position: fixed;-->
+<!--            z-index: 100;-->
+<!--            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);-->
+<!--        }-->
+
+<!--        .sidebar.collapsed {-->
+<!--            width: 70px;-->
+<!--        }-->
+
+<!--        .sidebar.expanded {-->
+<!--            width: 250px;-->
+<!--        }-->
+
+<!--        .sidebar a {-->
+<!--            color: #fff;-->
+<!--            text-decoration: none;-->
+<!--            display: block;-->
+<!--            padding: 12px 15px;-->
+<!--            border-radius: 8px;-->
+<!--            margin-bottom: 5px;-->
+<!--            transition: all 0.2s;-->
+<!--            white-space: nowrap;-->
+<!--            overflow: hidden;-->
+<!--        }-->
+
+<!--        .sidebar.collapsed a span {-->
+<!--            display: none;-->
+<!--        }-->
+
+<!--        .sidebar a:hover, .sidebar a.active {-->
+<!--            background-color: #b52b38;-->
+<!--        }-->
+
+<!--        .sidebar a i {-->
+<!--            margin-right: 10px;-->
+<!--            width: 20px;-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        .sidebar.collapsed a i {-->
+<!--            margin-right: 0;-->
+<!--        }-->
+
+<!--        .sidebar-header {-->
+<!--            padding: 20px 15px;-->
+<!--            border-bottom: 1px solid rgba(255, 255, 255, 0.1);-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--            justify-content: space-between;-->
+<!--        }-->
+
+<!--        .sidebar.collapsed .sidebar-header {-->
+<!--            justify-content: center;-->
+<!--        }-->
+
+<!--        .sidebar.collapsed .sidebar-header h4,-->
+<!--        .sidebar.collapsed .toggle-btn span {-->
+<!--            display: none;-->
+<!--        }-->
+
+<!--        .toggle-btn {-->
+<!--            background: none;-->
+<!--            border: none;-->
+<!--            color: white;-->
+<!--            cursor: pointer;-->
+<!--            font-size: 1.2rem;-->
+<!--        }-->
+
+<!--        /* Main Content */-->
+<!--        .content {-->
+<!--            padding: 20px;-->
+<!--            transition: all 0.3s;-->
+<!--        }-->
+
+<!--        .content.expanded {-->
+<!--            margin-left: 250px;-->
+<!--        }-->
+
+<!--        .content.collapsed {-->
+<!--            margin-left: 70px;-->
+<!--        }-->
+
+<!--        .card {-->
+<!--            border-radius: 15px;-->
+<!--            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);-->
+<!--            transition: transform 0.2s;-->
+<!--        }-->
+
+<!--        .card:hover {-->
+<!--            transform: translateY(-5px);-->
+<!--        }-->
+
+<!--        .counter {-->
+<!--            font-size: 2.5rem;-->
+<!--            font-weight: bold;-->
+<!--            color: #dc3545;-->
+<!--        }-->
+
+<!--        /* Responsividade */-->
+<!--        @media (max-width: 768px) {-->
+<!--            .sidebar {-->
+<!--                width: 70px;-->
+<!--            }-->
+
+<!--            .sidebar.expanded {-->
+<!--                width: 250px;-->
+<!--            }-->
+
+<!--            .content {-->
+<!--                margin-left: 70px;-->
+<!--            }-->
+
+<!--            .content.expanded {-->
+<!--                margin-left: 250px;-->
+<!--            }-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+<!--        &lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--        <nav class="sidebar expanded">-->
+<!--            <div class="sidebar-header">-->
+<!--                <h4 class="mb-0">📚 Senai Java</h4>-->
+<!--                <button class="toggle-btn" id="sidebarToggle">-->
+<!--                    <i class="fas fa-bars"></i>-->
+<!--                    <span>Recolher</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--            <div class="p-3">-->
+<!--                <a href="./index.html" class="active">-->
+<!--                    <i class="fas fa-home"></i>-->
+<!--                    <span>Dashboard</span>-->
+<!--                </a>-->
+<!--                <a href="./professor.html">-->
+<!--                    <i class="fas fa-chalkboard-teacher"></i>-->
+<!--                    <span>Professores</span>-->
+<!--                </a>-->
+<!--                <a href="./aluno.html">-->
+<!--                    <i class="fas fa-user-graduate"></i>-->
+<!--                    <span>Alunos</span>-->
+<!--                </a>-->
+<!--                <a href="./turma.html">-->
+<!--                    <i class="fas fa-users"></i>-->
+<!--                    <span>Turmas</span>-->
+<!--                </a>-->
+<!--                <a href="./disciplina.html">-->
+<!--                    <i class="fas fa-book"></i>-->
+<!--                    <span>Disciplinas</span>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <i class="fas fa-cog"></i>-->
+<!--                    <span>Configurações</span>-->
+<!--                </a>-->
+<!--                <a href="login.html">-->
+<!--                    <i class="fas fa-sign-out-alt"></i>-->
+<!--                    <span>Logout</span>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </nav>-->
+
+<!--        &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--        <main class="content expanded">-->
+<!--            <h2 class="mb-4">Bem-vindo ao Sistema Escolar</h2>-->
+
+<!--            &lt;!&ndash; Cards Resumo &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Professores</h5>-->
+<!--                            <p class="counter">12</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Alunos</h5>-->
+<!--                            <p class="counter">240</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Turmas</h5>-->
+<!--                            <p class="counter">8</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráfico ou tabela futura &ndash;&gt;-->
+<!--            <div class="card p-3">-->
+<!--                <h5>Últimos cadastros</h5>-->
+<!--                <table class="table table-striped">-->
+<!--                    <thead>-->
+<!--                    <tr>-->
+<!--                        <th>Nome</th>-->
+<!--                        <th>Tipo</th>-->
+<!--                        <th>Data</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                    <tr>-->
+<!--                        <td>Maria Souza</td>-->
+<!--                        <td>Aluno</td>-->
+<!--                        <td>22/09/2025</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>João Silva</td>-->
+<!--                        <td>Professor</td>-->
+<!--                        <td>20/09/2025</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Turma Java 01</td>-->
+<!--                        <td>Turma</td>-->
+<!--                        <td>18/09/2025</td>-->
+<!--                    </tr>-->
+<!--                    </tbody>-->
+<!--                </table>-->
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--<script>-->
+<!--    // Função para alternar a barra lateral-->
+<!--    document.getElementById('sidebarToggle').addEventListener('click', function() {-->
+<!--        const sidebar = document.querySelector('.sidebar');-->
+<!--        const content = document.querySelector('.content');-->
+<!--        const toggleText = this.querySelector('span');-->
+
+<!--        if (sidebar.classList.contains('expanded')) {-->
+<!--            sidebar.classList.remove('expanded');-->
+<!--            sidebar.classList.add('collapsed');-->
+<!--            content.classList.remove('expanded');-->
+<!--            content.classList.add('collapsed');-->
+<!--            toggleText.textContent = 'Expandir';-->
+<!--        } else {-->
+<!--            sidebar.classList.remove('collapsed');-->
+<!--            sidebar.classList.add('expanded');-->
+<!--            content.classList.remove('collapsed');-->
+<!--            content.classList.add('expanded');-->
+<!--            toggleText.textContent = 'Recolher';-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6fa;
+            transition: all 0.3s;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            min-height: 100vh;
+            background-color: #dc3545;
+            color: #fff;
+            transition: all 0.3s;
+            position: fixed;
+            z-index: 100;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar.collapsed {
+            width: 70px;
+        }
+
+        .sidebar.expanded {
+            width: 250px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            transition: all 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .sidebar.collapsed a span {
+            display: none;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #b52b38;
+        }
+
+        .sidebar a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar.collapsed a i {
+            margin-right: 0;
+        }
+
+        .sidebar-header {
+            padding: 20px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sidebar.collapsed .sidebar-header {
+            justify-content: center;
+        }
+
+        .sidebar.collapsed .sidebar-header h4,
+        .sidebar.collapsed .toggle-btn span {
+            display: none;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 5px;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 20px;
+            transition: all 0.3s;
+            min-height: 100vh;
+            position: relative;
+            left: 0;
+        }
+
+        .content.expanded {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+        }
+
+        .content.collapsed {
+            margin-left: 70px;
+            width: calc(100% - 70px);
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            border: none;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+        /* Ajustes para a tabela */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 70px;
+            }
+
+            .sidebar.expanded {
+                width: 250px;
+                z-index: 1000;
+            }
+
+            .content {
+                margin-left: 70px;
+                width: calc(100% - 70px);
+            }
+
+            .content.expanded {
+                margin-left: 250px;
+                width: calc(100% - 250px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .content.expanded {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .sidebar.expanded {
+                width: 100%;
+            }
+
+            .sidebar.collapsed {
+                width: 60px;
+            }
+
+            .content.collapsed {
+                margin-left: 60px;
+                width: calc(100% - 60px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="sidebar expanded">
+            <div class="sidebar-header">
+                <h4 class="mb-0">📚 Senai Java</h4>
+                <button class="toggle-btn" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                    <span>Recolher</span>
+                </button>
+            </div>
+            <div class="p-3">
+                <a href="./index.html" class="active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="./professor.html">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Professores</span>
+                </a>
+                <a href="./aluno.html">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Alunos</span>
+                </a>
+                <a href="./turma.html">
+                    <i class="fas fa-users"></i>
+                    <span>Turmas</span>
+                </a>
+                <a href="./disciplina.html">
+                    <i class="fas fa-book"></i>
+                    <span>Disciplinas</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+                <a href="login.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content expanded">
+            <div class="container-fluid">
+                <h2 class="mb-4">Bem-vindo ao Sistema Escolar</h2>
+
+                <!-- Cards Resumo -->
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Professores</h5>
+                                <p class="counter">12</p>
+                                <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Alunos</h5>
+                                <p class="counter">240</p>
+                                <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Turmas</h5>
+                                <p class="counter">8</p>
+                                <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabela de últimos cadastros -->
+                <div class="card p-3">
+                    <h5 class="mb-3">Últimos cadastros</h5>
+                    <div class="table-container">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-danger">
+                            <tr>
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                                <th>Data</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Maria Souza</td>
+                                <td>Aluno</td>
+                                <td>22/09/2025</td>
+                            </tr>
+                            <tr>
+                                <td>João Silva</td>
+                                <td>Professor</td>
+                                <td>20/09/2025</td>
+                            </tr>
+                            <tr>
+                                <td>Turma Java 01</td>
+                                <td>Turma</td>
+                                <td>18/09/2025</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+<!-- https://easy-peasy.ai/pt/dashboard -->
+<script
+        src="https://bots.easy-peasy.ai/chat.min.js"
+        data-chat-url="https://bots.easy-peasy.ai/bot/0b825b8e-d66c-4332-8b72-d6d95f996be7"
+        data-btn-position="bottom-right"
+        data-widget-btn-color="#6366f1"
+        defer>
+</script>
+
+<script src="./boots.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Função para alternar a barra lateral
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+        const sidebar = document.querySelector('.sidebar');
+        const content = document.querySelector('.content');
+        const toggleText = this.querySelector('span');
+        const toggleIcon = this.querySelector('i');
+
+        if (sidebar.classList.contains('expanded')) {
+            sidebar.classList.remove('expanded');
+            sidebar.classList.add('collapsed');
+            content.classList.remove('expanded');
+            content.classList.add('collapsed');
+            toggleText.textContent = 'Expandir';
+            toggleIcon.className = 'fas fa-chevron-right';
+        } else {
+            sidebar.classList.remove('collapsed');
+            sidebar.classList.add('expanded');
+            content.classList.remove('collapsed');
+            content.classList.add('expanded');
+            toggleText.textContent = 'Recolher';
+            toggleIcon.className = 'fas fa-bars';
+        }
+    });
+
+    // Ajustar layout na carga da página
+    window.addEventListener('load', function() {
+        const sidebar = document.querySelector('.sidebar');
+        const content = document.querySelector('.content');
+
+        // Garantir que o conteúdo não fique escondido
+        if (sidebar.classList.contains('expanded')) {
+            content.style.marginLeft = '250px';
+            content.style.width = 'calc(100% - 250px)';
+        } else {
+            content.style.marginLeft = '70px';
+            content.style.width = 'calc(100% - 70px)';
+        }
+    });
+
+    // Ajustar layout quando a janela for redimensionada
+    window.addEventListener('resize', function() {
+        const sidebar = document.querySelector('.sidebar');
+        const content = document.querySelector('.content');
+
+        if (window.innerWidth <= 576) {
+            if (sidebar.classList.contains('expanded')) {
+                content.style.marginLeft = '0';
+                content.style.width = '100%';
+            }
+        } else {
+            if (sidebar.classList.contains('expanded')) {
+                content.style.marginLeft = '250px';
+                content.style.width = 'calc(100% - 250px)';
+            } else {
+                content.style.marginLeft = '70px';
+                content.style.width = 'calc(100% - 70px)';
+            }
+        }
+    });
+
+
+</script>
+</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="./style.css">-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; Navbar &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-danger py-2">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="index.html">-->
+<!--            <img style="width: 130px;" src="https://desenvolveitapevi.wordpress.com/wp-content/uploads/2016/02/logo-senai1.png" alt="">-->
+<!--        </a>-->
+<!--        <div class="collapse navbar-collapse">-->
+<!--            <ul class="navbar-nav">-->
+<!--                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="professor.html">Professor</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="aluno.html">Aluno</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--&lt;!&ndash; Conteúdo &ndash;&gt;-->
+<!--<div class="container mt-4">-->
+<!--    <h2 class="mb-4 text-center">📊 Dashboard Escolar</h2>-->
+
+<!--    <div class="row">-->
+<!--        <div class="col-md-4">-->
+<!--            <div class="card text-center shadow p-3 mb-4">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Professores</h5>-->
+<!--                    <p class="display-6">12</p>-->
+<!--                    <a href="professor.html" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-4">-->
+<!--            <div class="card text-center shadow p-3 mb-4">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Alunos</h5>-->
+<!--                    <p class="display-6">240</p>-->
+<!--                    <a href="aluno.html" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-4">-->
+<!--            <div class="card text-center shadow p-3 mb-4">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Turmas</h5>-->
+<!--                    <p class="display-6">8</p>-->
+<!--                    <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Últimos cadastros &ndash;&gt;-->
+<!--    <div class="card shadow p-3">-->
+<!--        <h5>Últimos cadastros</h5>-->
+<!--        <table class="table table-striped text-center">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>Nome</th>-->
+<!--                <th>Tipo</th>-->
+<!--                <th>Data</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr><td>Maria Souza</td><td>Aluno</td><td>22/09/2025</td></tr>-->
+<!--            <tr><td>João Silva</td><td>Professor</td><td>20/09/2025</td></tr>-->
+<!--            <tr><td>Turma Java 01</td><td>Turma</td><td>18/09/2025</td></tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <style>-->
+<!--        body {-->
+<!--          background-color: #f5f6fa;-->
+<!--        }-->
+<!--        h2 {-->
+<!--          font-weight: 700;-->
+<!--          color: #333;-->
+<!--        }-->
+<!--        .card {-->
+<!--          border-radius: 12px;-->
+<!--        }-->
+<!--        .table thead {-->
+<!--          background-color: #dc3545;-->
+<!--          color: white;-->
+<!--        }-->
+<!--        .table-hover tbody tr:hover {-->
+<!--          background-color: rgba(220, 53, 69, 0.1);-->
+<!--          cursor: pointer;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; Navbar &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-danger py-2">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="index.html">-->
+<!--            <img style="width: 130px;" src="https://desenvolveitapevi.wordpress.com/wp-content/uploads/2016/02/logo-senai1.png" alt="">-->
+<!--        </a>-->
+<!--        <div class="collapse navbar-collapse">-->
+<!--            <ul class="navbar-nav">-->
+<!--                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="escola.html">Escola</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="professor.html">Professor</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="aluno.html">Aluno</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--&lt;!&ndash; Conteúdo &ndash;&gt;-->
+<!--<div class="container mt-4">-->
+<!--    <h2 class="mb-4 text-center">📊 Dashboard Escolar</h2>-->
+
+<!--    &lt;!&ndash; Cards &ndash;&gt;-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-4">-->
+<!--            <div class="card text-center shadow p-3 mb-4">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Escolas</h5>-->
+<!--                    <p id="qtdEscolas" class="display-6">12</p>-->
+<!--                    <a href="escola.html" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-4">-->
+<!--            <div class="card text-center shadow p-3 mb-4">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Professores</h5>-->
+<!--                    <p id="qtdProfessores" class="display-6">12</p>-->
+<!--                    <a href="professor.html" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+
+
+<!--        <div class="col-md-4">-->
+<!--            <div class="card text-center shadow p-3 mb-4">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Alunos</h5>-->
+<!--                    <p id="qtdAlunos" class="display-6">240</p>-->
+<!--                    <a href="aluno.html" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-4">-->
+<!--            <div class="card text-center shadow p-3 mb-4">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Turmas</h5>-->
+<!--                    <p id="qtdTurmas" class="display-6">8</p>-->
+<!--                    <a href="turma.html" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Últimos cadastros &ndash;&gt;-->
+<!--    <div class="card shadow p-3 mb-4">-->
+<!--        <h5>Últimos cadastros</h5>-->
+<!--        <table class="table table-striped table-hover text-center">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>Nome</th>-->
+<!--                <th>Tipo</th>-->
+<!--                <th>Data</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody id="tabelaCadastros">-->
+<!--            <tr><td>Maria Souza</td><td>Aluno</td><td>22/09/2025</td></tr>-->
+<!--            <tr><td>João Silva</td><td>Professor</td><td>20/09/2025</td></tr>-->
+<!--            <tr><td>Turma Java 01</td><td>Turma</td><td>18/09/2025</td></tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Gráfico &ndash;&gt;-->
+<!--    <div class="card shadow p-3 mt-4">-->
+<!--        <h5>Matrículas por Ano</h5>-->
+<!--        <div class="d-flex justify-content-end mb-2">-->
+<!--            <select id="filtroAno" class="form-select w-auto">-->
+<!--                <option value="2025" selected>2025</option>-->
+<!--                <option value="2024">2024</option>-->
+<!--                <option value="2023">2023</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <canvas id="graficoMatriculas" height="100"></canvas>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Scripts &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--<script>-->
+<!--    // Dados simulados-->
+<!--    const dadosMatriculas = {-->
+<!--      "2025": [30, 45, 60, 20, 80, 55],-->
+<!--      "2024": [10, 25, 50, 35, 40, 60],-->
+<!--      "2023": [5, 15, 20, 10, 25, 30]-->
+<!--    };-->
+
+<!--    // Inicializa gráfico-->
+<!--    const ctx = document.getElementById('graficoMatriculas').getContext('2d');-->
+<!--    let grafico = new Chart(ctx, {-->
+<!--      type: 'bar',-->
+<!--      data: {-->
+<!--        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],-->
+<!--        datasets: [{-->
+<!--          label: 'Matrículas',-->
+<!--          data: dadosMatriculas["2025"],-->
+<!--          backgroundColor: '#dc3545'-->
+<!--        }]-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Filtro de ano-->
+<!--    document.getElementById('filtroAno').addEventListener('change', function() {-->
+<!--      const ano = this.value;-->
+<!--      grafico.data.datasets[0].data = dadosMatriculas[ano];-->
+<!--      grafico.update();-->
+<!--    });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;Versão com gráfico interativo (usando Chart.js) no dashboard para substituir a tabela e dar mais “cara” de sistema moderno?&ndash;&gt;-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          font-family: Arial, sans-serif;-->
+<!--          background-color: #f5f6fa;-->
+<!--        }-->
+<!--        .sidebar {-->
+<!--          min-height: 100vh;-->
+<!--          background-color: #dc3545;-->
+<!--          color: #fff;-->
+<!--        }-->
+<!--        .sidebar a {-->
+<!--          color: #fff;-->
+<!--          text-decoration: none;-->
+<!--          display: block;-->
+<!--          padding: 10px 15px;-->
+<!--          border-radius: 8px;-->
+<!--          margin-bottom: 5px;-->
+<!--        }-->
+<!--        .sidebar a:hover, .sidebar a.active {-->
+<!--          background-color: #b52b38;-->
+<!--        }-->
+<!--        .content {-->
+<!--          padding: 20px;-->
+<!--        }-->
+<!--        .card {-->
+<!--          border-radius: 15px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">-->
+<!--            <h4 class="mb-4">📚 Senai Java</h4>-->
+<!--            <a href="#" class="active">🏠 Dashboard</a>-->
+<!--            <a href="#">👨‍🏫 Professores</a>-->
+<!--            <a href="#">👨‍🎓 Alunos</a>-->
+<!--            <a href="#">📘 Turmas</a>-->
+<!--            <a href="#">📑 Disciplinas</a>-->
+<!--            <a href="#">⚙️ Configurações</a>-->
+<!--            <a href="login.html">🔑 Logout</a>-->
+<!--        </nav>-->
+
+<!--        &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--        <main class="col-md-9 ms-sm-auto col-lg-10 content">-->
+<!--            <h2 class="mb-4">Bem-vindo ao Sistema Escolar</h2>-->
+
+<!--            &lt;!&ndash; Cards Resumo &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Professores</h5>-->
+<!--                            <p class="display-6">12</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Alunos</h5>-->
+<!--                            <p class="display-6">240</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Turmas</h5>-->
+<!--                            <p class="display-6">8</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráfico &ndash;&gt;-->
+<!--            <div class="card shadow p-3">-->
+<!--                <h5 class="mb-3">Distribuição de Cadastros</h5>-->
+<!--                <canvas id="schoolChart" height="100"></canvas>-->
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--&lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--<script>-->
+<!--    const ctx = document.getElementById('schoolChart').getContext('2d');-->
+<!--    new Chart(ctx, {-->
+<!--      type: 'bar', // Pode trocar para 'doughnut', 'line', 'pie'-->
+<!--      data: {-->
+<!--        labels: ['Professores', 'Alunos', 'Turmas'],-->
+<!--        datasets: [{-->
+<!--          label: 'Quantidade',-->
+<!--          data: [12, 240, 8],-->
+<!--          backgroundColor: ['#ff6384', '#36a2eb', '#ffce56'],-->
+<!--          borderColor: '#333',-->
+<!--          borderWidth: 1-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: {-->
+<!--          legend: {-->
+<!--            display: true,-->
+<!--            position: 'bottom'-->
+<!--          }-->
+<!--        },-->
+<!--        scales: {-->
+<!--          y: {-->
+<!--            beginAtZero: true-->
+<!--          }-->
+<!--        }-->
+<!--      }-->
+<!--    });-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+<!--Versão com 2 gráficos lado a lado (exemplo: um gráfico de barras e um gráfico de pizza) para deixar o dashboard ainda mais rico?-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          font-family: Arial, sans-serif;-->
+<!--          background-color: #f5f6fa;-->
+<!--        }-->
+<!--        .sidebar {-->
+<!--          min-height: 100vh;-->
+<!--          background-color: #dc3545;-->
+<!--          color: #fff;-->
+<!--        }-->
+<!--        .sidebar a {-->
+<!--          color: #fff;-->
+<!--          text-decoration: none;-->
+<!--          display: block;-->
+<!--          padding: 10px 15px;-->
+<!--          border-radius: 8px;-->
+<!--          margin-bottom: 5px;-->
+<!--        }-->
+<!--        .sidebar a:hover, .sidebar a.active {-->
+<!--          background-color: #b52b38;-->
+<!--        }-->
+<!--        .content {-->
+<!--          padding: 20px;-->
+<!--        }-->
+<!--        .card {-->
+<!--          border-radius: 15px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">-->
+<!--            <h4 class="mb-4">📚 Senai Java</h4>-->
+<!--            <a href="#" class="active">🏠 Dashboard</a>-->
+<!--            <a href="#">👨‍🏫 Professores</a>-->
+<!--            <a href="#">👨‍🎓 Alunos</a>-->
+<!--            <a href="#">📘 Turmas</a>-->
+<!--            <a href="#">📑 Disciplinas</a>-->
+<!--            <a href="#">⚙️ Configurações</a>-->
+<!--            <a href="login.html">🔑 Logout</a>-->
+<!--        </nav>-->
+
+<!--        &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--        <main class="col-md-9 ms-sm-auto col-lg-10 content">-->
+<!--            <h2 class="mb-4">Bem-vindo ao Sistema Escolar</h2>-->
+
+<!--            &lt;!&ndash; Cards Resumo &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Professores</h5>-->
+<!--                            <p class="display-6">12</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Alunos</h5>-->
+<!--                            <p class="display-6">240</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Turmas</h5>-->
+<!--                            <p class="display-6">8</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráficos &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                    <div class="card shadow p-3 mb-4">-->
+<!--                        <h5 class="mb-3">Distribuição (Barras)</h5>-->
+<!--                        <canvas id="barChart" height="200"></canvas>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-6">-->
+<!--                    <div class="card shadow p-3 mb-4">-->
+<!--                        <h5 class="mb-3">Distribuição (Pizza)</h5>-->
+<!--                        <canvas id="pieChart" height="200"></canvas>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--&lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--<script>-->
+<!--    const labels = ['Professores', 'Alunos', 'Turmas'];-->
+<!--    const dataValues = [12, 240, 8];-->
+<!--    const colors = ['#ff6384', '#36a2eb', '#ffce56'];-->
+
+<!--    // Gráfico de Barras-->
+<!--    new Chart(document.getElementById('barChart'), {-->
+<!--      type: 'bar',-->
+<!--      data: {-->
+<!--        labels: labels,-->
+<!--        datasets: [{-->
+<!--          label: 'Quantidade',-->
+<!--          data: dataValues,-->
+<!--          backgroundColor: colors,-->
+<!--          borderColor: '#333',-->
+<!--          borderWidth: 1-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: { legend: { display: false } },-->
+<!--        scales: { y: { beginAtZero: true } }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Gráfico de Pizza-->
+<!--    new Chart(document.getElementById('pieChart'), {-->
+<!--      type: 'pie',-->
+<!--      data: {-->
+<!--        labels: labels,-->
+<!--        datasets: [{-->
+<!--          label: 'Distribuição',-->
+<!--          data: dataValues,-->
+<!--          backgroundColor: colors-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: { legend: { position: 'bottom' } }-->
+<!--      }-->
+<!--    });-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+<!--Versão com gráfico de linha com evolução mensal de matrículas (exemplo: alunos cadastrados mês a mês)-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          font-family: Arial, sans-serif;-->
+<!--          background-color: #f5f6fa;-->
+<!--        }-->
+<!--        .sidebar {-->
+<!--          min-height: 100vh;-->
+<!--          background-color: #dc3545;-->
+<!--          color: #fff;-->
+<!--        }-->
+<!--        .sidebar a {-->
+<!--          color: #fff;-->
+<!--          text-decoration: none;-->
+<!--          display: block;-->
+<!--          padding: 10px 15px;-->
+<!--          border-radius: 8px;-->
+<!--          margin-bottom: 5px;-->
+<!--        }-->
+<!--        .sidebar a:hover, .sidebar a.active {-->
+<!--          background-color: #b52b38;-->
+<!--        }-->
+<!--        .content {-->
+<!--          padding: 20px;-->
+<!--        }-->
+<!--        .card {-->
+<!--          border-radius: 15px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">-->
+<!--            <h4 class="mb-4">📚 Senai Java</h4>-->
+<!--            <a href="#" class="active">🏠 Dashboard</a>-->
+<!--            <a href="#">👨‍🏫 Professores</a>-->
+<!--            <a href="#">👨‍🎓 Alunos</a>-->
+<!--            <a href="#">📘 Turmas</a>-->
+<!--            <a href="#">📑 Disciplinas</a>-->
+<!--            <a href="#">⚙️ Configurações</a>-->
+<!--            <a href="login.html">🔑 Logout</a>-->
+<!--        </nav>-->
+
+<!--        &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--        <main class="col-md-9 ms-sm-auto col-lg-10 content">-->
+<!--            <h2 class="mb-4">Bem-vindo ao Sistema Escolar</h2>-->
+
+<!--            &lt;!&ndash; Cards Resumo &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Professores</h5>-->
+<!--                            <p class="display-6">12</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Alunos</h5>-->
+<!--                            <p class="display-6">240</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Turmas</h5>-->
+<!--                            <p class="display-6">8</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráficos lado a lado &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                    <div class="card shadow p-3 mb-4">-->
+<!--                        <h5 class="mb-3">Distribuição (Barras)</h5>-->
+<!--                        <canvas id="barChart" height="200"></canvas>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-6">-->
+<!--                    <div class="card shadow p-3 mb-4">-->
+<!--                        <h5 class="mb-3">Distribuição (Pizza)</h5>-->
+<!--                        <canvas id="pieChart" height="200"></canvas>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráfico de linha &ndash;&gt;-->
+<!--            <div class="card shadow p-3 mb-4">-->
+<!--                <h5 class="mb-3">Evolução de Matrículas (Mensal)</h5>-->
+<!--                <canvas id="lineChart" height="120"></canvas>-->
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--&lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--<script>-->
+<!--    const labels = ['Professores', 'Alunos', 'Turmas'];-->
+<!--    const dataValues = [12, 240, 8];-->
+<!--    const colors = ['#ff6384', '#36a2eb', '#ffce56'];-->
+
+<!--    // Gráfico de Barras-->
+<!--    new Chart(document.getElementById('barChart'), {-->
+<!--      type: 'bar',-->
+<!--      data: {-->
+<!--        labels: labels,-->
+<!--        datasets: [{-->
+<!--          label: 'Quantidade',-->
+<!--          data: dataValues,-->
+<!--          backgroundColor: colors,-->
+<!--          borderColor: '#333',-->
+<!--          borderWidth: 1-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: { legend: { display: false } },-->
+<!--        scales: { y: { beginAtZero: true } }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Gráfico de Pizza-->
+<!--    new Chart(document.getElementById('pieChart'), {-->
+<!--      type: 'pie',-->
+<!--      data: {-->
+<!--        labels: labels,-->
+<!--        datasets: [{-->
+<!--          label: 'Distribuição',-->
+<!--          data: dataValues,-->
+<!--          backgroundColor: colors-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: { legend: { position: 'bottom' } }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Gráfico de Linha (Evolução Mensal de Matrículas)-->
+<!--    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set'];-->
+<!--    const matriculas = [20, 35, 50, 80, 120, 150, 180, 210, 240];-->
+
+<!--    new Chart(document.getElementById('lineChart'), {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--        labels: months,-->
+<!--        datasets: [{-->
+<!--          label: 'Matrículas',-->
+<!--          data: matriculas,-->
+<!--          fill: true,-->
+<!--          borderColor: '#36a2eb',-->
+<!--          backgroundColor: 'rgba(54,162,235,0.2)',-->
+<!--          tension: 0.3,-->
+<!--          pointBackgroundColor: '#36a2eb'-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: { legend: { position: 'bottom' } },-->
+<!--        scales: { y: { beginAtZero: true } }-->
+<!--      }-->
+<!--    });-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+<!--Versão com filtro de período (ex: selecionar ano) para atualizar o gráfico de matrículas dinamicamente?-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          font-family: Arial, sans-serif;-->
+<!--          background-color: #f5f6fa;-->
+<!--        }-->
+<!--        .sidebar {-->
+<!--          min-height: 100vh;-->
+<!--          background-color: #dc3545;-->
+<!--          color: #fff;-->
+<!--        }-->
+<!--        .sidebar a {-->
+<!--          color: #fff;-->
+<!--          text-decoration: none;-->
+<!--          display: block;-->
+<!--          padding: 10px 15px;-->
+<!--          border-radius: 8px;-->
+<!--          margin-bottom: 5px;-->
+<!--        }-->
+<!--        .sidebar a:hover, .sidebar a.active {-->
+<!--          background-color: #b52b38;-->
+<!--        }-->
+<!--        .content {-->
+<!--          padding: 20px;-->
+<!--        }-->
+<!--        .card {-->
+<!--          border-radius: 15px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">-->
+<!--            <h4 class="mb-4">📚 Senai Java</h4>-->
+<!--            <a href="#" class="active">🏠 Dashboard</a>-->
+<!--            <a href="#">👨‍🏫 Professores</a>-->
+<!--            <a href="#">👨‍🎓 Alunos</a>-->
+<!--            <a href="#">📘 Turmas</a>-->
+<!--            <a href="#">📑 Disciplinas</a>-->
+<!--            <a href="#">⚙️ Configurações</a>-->
+<!--            <a href="login.html">🔑 Logout</a>-->
+<!--        </nav>-->
+
+<!--        &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--        <main class="col-md-9 ms-sm-auto col-lg-10 content">-->
+<!--            <h2 class="mb-4">Bem-vindo ao Sistema Escolar</h2>-->
+
+<!--            &lt;!&ndash; Cards Resumo &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Professores</h5>-->
+<!--                            <p class="display-6">12</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Alunos</h5>-->
+<!--                            <p class="display-6">240</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Turmas</h5>-->
+<!--                            <p class="display-6">8</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráficos lado a lado &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                    <div class="card shadow p-3 mb-4">-->
+<!--                        <h5 class="mb-3">Distribuição (Barras)</h5>-->
+<!--                        <canvas id="barChart" height="200"></canvas>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-6">-->
+<!--                    <div class="card shadow p-3 mb-4">-->
+<!--                        <h5 class="mb-3">Distribuição (Pizza)</h5>-->
+<!--                        <canvas id="pieChart" height="200"></canvas>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráfico de linha com filtro de ano &ndash;&gt;-->
+<!--            <div class="card shadow p-3 mb-4">-->
+<!--                <div class="d-flex justify-content-between align-items-center mb-3">-->
+<!--                    <h5>Evolução de Matrículas (Mensal)</h5>-->
+<!--                    <select id="yearSelect" class="form-select w-auto">-->
+<!--                        <option value="2023">2023</option>-->
+<!--                        <option value="2024">2024</option>-->
+<!--                        <option value="2025" selected>2025</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <canvas id="lineChart" height="120"></canvas>-->
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--&lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--<script>-->
+<!--    const labels = ['Professores', 'Alunos', 'Turmas'];-->
+<!--    const dataValues = [12, 240, 8];-->
+<!--    const colors = ['#ff6384', '#36a2eb', '#ffce56'];-->
+
+<!--    // Gráfico de Barras-->
+<!--    new Chart(document.getElementById('barChart'), {-->
+<!--      type: 'bar',-->
+<!--      data: {-->
+<!--        labels: labels,-->
+<!--        datasets: [{-->
+<!--          label: 'Quantidade',-->
+<!--          data: dataValues,-->
+<!--          backgroundColor: colors,-->
+<!--          borderColor: '#333',-->
+<!--          borderWidth: 1-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: { legend: { display: false } },-->
+<!--        scales: { y: { beginAtZero: true } }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Gráfico de Pizza-->
+<!--    new Chart(document.getElementById('pieChart'), {-->
+<!--      type: 'pie',-->
+<!--      data: {-->
+<!--        labels: labels,-->
+<!--        datasets: [{-->
+<!--          label: 'Distribuição',-->
+<!--          data: dataValues,-->
+<!--          backgroundColor: colors-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: { legend: { position: 'bottom' } }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Dados de Matrículas por ano-->
+<!--    const matriculasAno = {-->
+<!--      2023: [15, 30, 45, 70, 100, 130, 160, 190, 210],-->
+<!--      2024: [20, 40, 60, 90, 130, 160, 200, 230, 260],-->
+<!--      2025: [25, 50, 80, 110, 150, 190, 220, 250, 280]-->
+<!--    };-->
+
+<!--    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set'];-->
+
+<!--    // Gráfico de Linha-->
+<!--    const ctxLine = document.getElementById('lineChart').getContext('2d');-->
+<!--    const lineChart = new Chart(ctxLine, {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--        labels: months,-->
+<!--        datasets: [{-->
+<!--          label: 'Matrículas',-->
+<!--          data: matriculasAno[2025],-->
+<!--          fill: true,-->
+<!--          borderColor: '#36a2eb',-->
+<!--          backgroundColor: 'rgba(54,162,235,0.2)',-->
+<!--          tension: 0.3,-->
+<!--          pointBackgroundColor: '#36a2eb'-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: { legend: { position: 'bottom' } },-->
+<!--        scales: { y: { beginAtZero: true } }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Filtro de Ano-->
+<!--    document.getElementById('yearSelect').addEventListener('change', function() {-->
+<!--      const selectedYear = this.value;-->
+<!--      lineChart.data.datasets[0].data = matriculasAno[selectedYear];-->
+<!--      lineChart.update();-->
+<!--    });-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--Versão com fltro de ano controlar todos os gráficos (Barras, Pizza e Linha). Assim, quando mudar o período, todos os gráficos atualizam juntos.-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Sistema Escolar - Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          font-family: Arial, sans-serif;-->
+<!--          background-color: #f5f6fa;-->
+<!--        }-->
+<!--        .sidebar {-->
+<!--          min-height: 100vh;-->
+<!--          background-color: #dc3545;-->
+<!--          color: #fff;-->
+<!--        }-->
+<!--        .sidebar a {-->
+<!--          color: #fff;-->
+<!--          text-decoration: none;-->
+<!--          display: block;-->
+<!--          padding: 10px 15px;-->
+<!--          border-radius: 8px;-->
+<!--          margin-bottom: 5px;-->
+<!--        }-->
+<!--        .sidebar a:hover, .sidebar a.active {-->
+<!--          background-color: #b52b38;-->
+<!--        }-->
+<!--        .content {-->
+<!--          padding: 20px;-->
+<!--        }-->
+<!--        .card {-->
+<!--          border-radius: 15px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--        <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">-->
+<!--            <h4 class="mb-4">📚 Senai Java</h4>-->
+<!--            <a href="#" class="active">🏠 Dashboard</a>-->
+<!--            <a href="#">👨‍🏫 Professores</a>-->
+<!--            <a href="#">👨‍🎓 Alunos</a>-->
+<!--            <a href="#">📘 Turmas</a>-->
+<!--            <a href="#">📑 Disciplinas</a>-->
+<!--            <a href="#">⚙️ Configurações</a>-->
+<!--            <a href="login.html">🔑 Logout</a>-->
+<!--        </nav>-->
+
+<!--        &lt;!&ndash; Main Content &ndash;&gt;-->
+<!--        <main class="col-md-9 ms-sm-auto col-lg-10 content">-->
+<!--            <h2 class="mb-4">Bem-vindo ao Sistema Escolar</h2>-->
+
+<!--            &lt;!&ndash; Filtro Global &ndash;&gt;-->
+<!--            <div class="d-flex justify-content-end mb-3">-->
+<!--                <label for="yearSelect" class="me-2 fw-bold">Ano:</label>-->
+<!--                <select id="yearSelect" class="form-select w-auto">-->
+<!--                    <option value="2023">2023</option>-->
+<!--                    <option value="2024">2024</option>-->
+<!--                    <option value="2025" selected>2025</option>-->
+<!--                </select>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Cards Resumo &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Professores</h5>-->
+<!--                            <p id="professoresResumo" class="display-6">12</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Alunos</h5>-->
+<!--                            <p id="alunosResumo" class="display-6">240</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                    <div class="card text-center shadow p-3 mb-4">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Turmas</h5>-->
+<!--                            <p id="turmasResumo" class="display-6">8</p>-->
+<!--                            <a href="#" class="btn btn-danger btn-sm">Gerenciar</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráficos lado a lado &ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                    <div class="card shadow p-3 mb-4">-->
+<!--                        <h5 class="mb-3">Distribuição (Barras)</h5>-->
+<!--                        <canvas id="barChart" height="200"></canvas>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-6">-->
+<!--                    <div class="card shadow p-3 mb-4">-->
+<!--                        <h5 class="mb-3">Distribuição (Pizza)</h5>-->
+<!--                        <canvas id="pieChart" height="200"></canvas>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Gráfico de linha &ndash;&gt;-->
+<!--            <div class="card shadow p-3 mb-4">-->
+<!--                <h5 class="mb-3">Evolução de Matrículas (Mensal)</h5>-->
+<!--                <canvas id="lineChart" height="120"></canvas>-->
+<!--            </div>-->
+<!--        </main>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--&lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--<script>-->
+<!--    const colors = ['#ff6384', '#36a2eb', '#ffce56'];-->
+
+<!--    // Dados por ano-->
+<!--    const dadosAno = {-->
+<!--      2023: { professores: 10, alunos: 200, turmas: 6, matriculas: [15, 30, 45, 70, 100, 130, 160, 190, 210] },-->
+<!--      2024: { professores: 11, alunos: 220, turmas: 7, matriculas: [20, 40, 60, 90, 130, 160, 200, 230, 260] },-->
+<!--      2025: { professores: 12, alunos: 240, turmas: 8, matriculas: [25, 50, 80, 110, 150, 190, 220, 250, 280] }-->
+<!--    };-->
+
+<!--    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set'];-->
+
+<!--    // Inicialização-->
+<!--    let anoAtual = 2025;-->
+<!--    let resumo = dadosAno[anoAtual];-->
+<!--    document.getElementById("professoresResumo").textContent = resumo.professores;-->
+<!--    document.getElementById("alunosResumo").textContent = resumo.alunos;-->
+<!--    document.getElementById("turmasResumo").textContent = resumo.turmas;-->
+
+<!--    // Gráfico de Barras-->
+<!--    const barChart = new Chart(document.getElementById('barChart'), {-->
+<!--      type: 'bar',-->
+<!--      data: {-->
+<!--        labels: ['Professores', 'Alunos', 'Turmas'],-->
+<!--        datasets: [{-->
+<!--          label: 'Quantidade',-->
+<!--          data: [resumo.professores, resumo.alunos, resumo.turmas],-->
+<!--          backgroundColor: colors,-->
+<!--          borderColor: '#333',-->
+<!--          borderWidth: 1-->
+<!--        }]-->
+<!--      },-->
+<!--      options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }-->
+<!--    });-->
+
+<!--    // Gráfico de Pizza-->
+<!--    const pieChart = new Chart(document.getElementById('pieChart'), {-->
+<!--      type: 'pie',-->
+<!--      data: {-->
+<!--        labels: ['Professores', 'Alunos', 'Turmas'],-->
+<!--        datasets: [{ data: [resumo.professores, resumo.alunos, resumo.turmas], backgroundColor: colors }]-->
+<!--      },-->
+<!--      options: { responsive: true, plugins: { legend: { position: 'bottom' } } }-->
+<!--    });-->
+
+<!--    // Gráfico de Linha-->
+<!--    const lineChart = new Chart(document.getElementById('lineChart'), {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--        labels: months,-->
+<!--        datasets: [{-->
+<!--          label: 'Matrículas',-->
+<!--          data: resumo.matriculas,-->
+<!--          fill: true,-->
+<!--          borderColor: '#36a2eb',-->
+<!--          backgroundColor: 'rgba(54,162,235,0.2)',-->
+<!--          tension: 0.3,-->
+<!--          pointBackgroundColor: '#36a2eb'-->
+<!--        }]-->
+<!--      },-->
+<!--      options: { responsive: true, plugins: { legend: { position: 'bottom' } }, scales: { y: { beginAtZero: true } } }-->
+<!--    });-->
+
+<!--    // Atualizar gráficos e cards ao trocar ano-->
+<!--    document.getElementById('yearSelect').addEventListener('change', function() {-->
+<!--      anoAtual = this.value;-->
+<!--      resumo = dadosAno[anoAtual];-->
+
+<!--      // Atualizar cards-->
+<!--      document.getElementById("professoresResumo").textContent = resumo.professores;-->
+<!--      document.getElementById("alunosResumo").textContent = resumo.alunos;-->
+<!--      document.getElementById("turmasResumo").textContent = resumo.turmas;-->
+
+<!--      // Atualizar gráficos-->
+<!--      barChart.data.datasets[0].data = [resumo.professores, resumo.alunos, resumo.turmas];-->
+<!--      barChart.update();-->
+
+<!--      pieChart.data.datasets[0].data = [resumo.professores, resumo.alunos, resumo.turmas];-->
+<!--      pieChart.update();-->
+
+<!--      lineChart.data.datasets[0].data = resumo.matriculas;-->
+<!--      lineChart.update();-->
+<!--    });-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+<!--Dashboard Escolar com filtro de período (Ano) que atualiza dinamicamente o gráfico de matrículas:-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Dashboard Escolar - Senai Java</title>-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          background-color: #f8f9fa;-->
+<!--        }-->
+<!--        .navbar {-->
+<!--          padding: 10px;-->
+<!--        }-->
+<!--        .dashboard-card {-->
+<!--          border-radius: 12px;-->
+<!--          box-shadow: 0 4px 10px rgba(0,0,0,0.1);-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; Navbar &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-danger">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="#">-->
+<!--            <img src="https://desenvolveitapevi.wordpress.com/wp-content/uploads/2016/02/logo-senai1.png" alt="Logo Senai" height="60">-->
+<!--        </a>-->
+<!--        <h5 class="text-white ms-2">Dashboard Escolar</h5>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--<div class="container-fluid mt-4">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Card Alunos &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Alunos</h4>-->
+<!--                <p class="display-6" id="qtdAlunos">350</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Professores &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Professores</h4>-->
+<!--                <p class="display-6" id="qtdProfessores">25</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Cursos &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Cursos</h4>-->
+<!--                <p class="display-6" id="qtdCursos">12</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Turmas &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Turmas</h4>-->
+<!--                <p class="display-6" id="qtdTurmas">18</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Gráfico com filtro &ndash;&gt;-->
+<!--    <div class="row mt-4">-->
+<!--        <div class="col-md-12">-->
+<!--            <div class="card dashboard-card p-4">-->
+<!--                <div class="d-flex justify-content-between align-items-center">-->
+<!--                    <h4>Matrículas por Mês</h4>-->
+<!--                    <select id="anoSelect" class="form-select w-auto">-->
+<!--                        <option value="2023">Ano 2023</option>-->
+<!--                        <option value="2024" selected>Ano 2024</option>-->
+<!--                        <option value="2025">Ano 2025</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <canvas id="matriculasChart" height="100"></canvas>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    // Dados de exemplo por ano-->
+<!--    const dadosMatriculas = {-->
+<!--      2023: [50, 60, 80, 90, 100, 120, 150, 130, 140, 160, 170, 180],-->
+<!--      2024: [70, 75, 90, 100, 120, 150, 170, 160, 180, 200, 210, 220],-->
+<!--      2025: [80, 85, 95, 110, 130, 160, 190, 180, 200, 220, 230, 250]-->
+<!--    };-->
+
+<!--    const ctx = document.getElementById('matriculasChart').getContext('2d');-->
+
+<!--    let matriculasChart = new Chart(ctx, {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--        labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],-->
+<!--        datasets: [{-->
+<!--          label: 'Matrículas',-->
+<!--          data: dadosMatriculas[2024], // default-->
+<!--          borderColor: 'rgba(220,53,69,1)',-->
+<!--          backgroundColor: 'rgba(220,53,69,0.3)',-->
+<!--          borderWidth: 2,-->
+<!--          tension: 0.3,-->
+<!--          fill: true-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: {-->
+<!--          legend: { display: true }-->
+<!--        }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Atualizar gráfico quando trocar ano-->
+<!--    document.getElementById('anoSelect').addEventListener('change', function() {-->
+<!--      const anoSelecionado = this.value;-->
+<!--      matriculasChart.data.datasets[0].data = dadosMatriculas[anoSelecionado];-->
+<!--      matriculasChart.update();-->
+<!--    });-->
+<!--</script>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Dashboard Escolar interativo e moderno, mantendo o estilo simples do Bootstrap -->
+<!--✔ Contadores animados para Alunos, Professores, Cursos e Turmas-->
+<!--✔ Gráfico com filtro de Ano + tipo de gráfico (linha, barra, pizza)-->
+<!--✔ Atalhos rápidos para páginas do sistema-->
+<!--✔ Design responsivo e moderno com animações-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Dashboard Escolar - Senai Java</title>-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          background-color: #f8f9fa;-->
+<!--        }-->
+<!--        .navbar {-->
+<!--          padding: 10px;-->
+<!--        }-->
+<!--        .dashboard-card {-->
+<!--          border-radius: 12px;-->
+<!--          box-shadow: 0 4px 10px rgba(0,0,0,0.1);-->
+<!--          transition: transform 0.2s ease;-->
+<!--        }-->
+<!--        .dashboard-card:hover {-->
+<!--          transform: scale(1.03);-->
+<!--        }-->
+<!--        .counter {-->
+<!--          font-size: 2.5rem;-->
+<!--          font-weight: bold;-->
+<!--          color: #dc3545;-->
+<!--        }-->
+<!--        .shortcut-btn {-->
+<!--          min-width: 150px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; Navbar &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-danger">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="#">-->
+<!--            <img src="https://desenvolveitapevi.wordpress.com/wp-content/uploads/2016/02/logo-senai1.png" alt="Logo Senai" height="60">-->
+<!--        </a>-->
+<!--        <h5 class="text-white ms-2">Dashboard Escolar</h5>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--<div class="container-fluid mt-4">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Card Alunos &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Alunos</h4>-->
+<!--                <p class="counter" data-target="350">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Professores &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Professores</h4>-->
+<!--                <p class="counter" data-target="25">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Cursos &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Cursos</h4>-->
+<!--                <p class="counter" data-target="12">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Turmas &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Turmas</h4>-->
+<!--                <p class="counter" data-target="18">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Gráfico com filtros &ndash;&gt;-->
+<!--    <div class="row mt-4">-->
+<!--        <div class="col-md-12">-->
+<!--            <div class="card dashboard-card p-4">-->
+<!--                <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center">-->
+<!--                    <h4>Matrículas por Mês</h4>-->
+<!--                    <div class="d-flex gap-2">-->
+<!--                        <select id="anoSelect" class="form-select">-->
+<!--                            <option value="2023">Ano 2023</option>-->
+<!--                            <option value="2024" selected>Ano 2024</option>-->
+<!--                            <option value="2025">Ano 2025</option>-->
+<!--                        </select>-->
+<!--                        <select id="tipoGrafico" class="form-select">-->
+<!--                            <option value="line" selected>Linha</option>-->
+<!--                            <option value="bar">Barras</option>-->
+<!--                            <option value="pie">Pizza</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <canvas id="matriculasChart" height="100"></canvas>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Atalhos do Sistema &ndash;&gt;-->
+<!--    <div class="row mt-5 text-center">-->
+<!--        <h4>Atalhos do Sistema</h4>-->
+<!--        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">-->
+<!--            <a href="./aluno.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Alunos</a>-->
+<!--            <a href="./professor.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Professores</a>-->
+<!--            <a href="./curso.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Cursos</a>-->
+<!--            <a href="./turma.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Turmas</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    // Dados de exemplo por ano-->
+<!--    const dadosMatriculas = {-->
+<!--      2023: [50, 60, 80, 90, 100, 120, 150, 130, 140, 160, 170, 180],-->
+<!--      2024: [70, 75, 90, 100, 120, 150, 170, 160, 180, 200, 210, 220],-->
+<!--      2025: [80, 85, 95, 110, 130, 160, 190, 180, 200, 220, 230, 250]-->
+<!--    };-->
+
+<!--    const ctx = document.getElementById('matriculasChart').getContext('2d');-->
+
+<!--    let matriculasChart = new Chart(ctx, {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--        labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],-->
+<!--        datasets: [{-->
+<!--          label: 'Matrículas',-->
+<!--          data: dadosMatriculas[2024],-->
+<!--          borderColor: 'rgba(220,53,69,1)',-->
+<!--          backgroundColor: 'rgba(220,53,69,0.3)',-->
+<!--          borderWidth: 2,-->
+<!--          tension: 0.3,-->
+<!--          fill: true-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: {-->
+<!--          legend: { display: true }-->
+<!--        }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Atualizar gráfico-->
+<!--    function atualizarGrafico() {-->
+<!--      const anoSelecionado = document.getElementById('anoSelect').value;-->
+<!--      const tipoSelecionado = document.getElementById('tipoGrafico').value;-->
+
+<!--      matriculasChart.destroy();-->
+<!--      matriculasChart = new Chart(ctx, {-->
+<!--        type: tipoSelecionado,-->
+<!--        data: {-->
+<!--          labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],-->
+<!--          datasets: [{-->
+<!--            label: 'Matrículas',-->
+<!--            data: dadosMatriculas[anoSelecionado],-->
+<!--            borderColor: 'rgba(220,53,69,1)',-->
+<!--            backgroundColor: tipoSelecionado === 'pie'-->
+<!--              ? ['#dc3545','#fd7e14','#ffc107','#20c997','#0dcaf0','#0d6efd','#6610f2','#6f42c1','#d63384','#198754','#212529','#adb5bd']-->
+<!--              : 'rgba(220,53,69,0.3)',-->
+<!--            borderWidth: 2,-->
+<!--            tension: 0.3,-->
+<!--            fill: tipoSelecionado === 'line'-->
+<!--          }]-->
+<!--        },-->
+<!--        options: {-->
+<!--          responsive: true,-->
+<!--          plugins: { legend: { display: true } }-->
+<!--        }-->
+<!--      });-->
+<!--    }-->
+
+<!--    document.getElementById('anoSelect').addEventListener('change', atualizarGrafico);-->
+<!--    document.getElementById('tipoGrafico').addEventListener('change', atualizarGrafico);-->
+
+<!--    // Contador animado-->
+<!--    document.querySelectorAll('.counter').forEach(counter => {-->
+<!--      const target = +counter.getAttribute('data-target');-->
+<!--      let count = 0;-->
+<!--      const increment = target / 50;-->
+<!--      const interval = setInterval(() => {-->
+<!--        count += increment;-->
+<!--        if (count >= target) {-->
+<!--          counter.textContent = target;-->
+<!--          clearInterval(interval);-->
+<!--        } else {-->
+<!--          counter.textContent = Math.ceil(count);-->
+<!--        }-->
+<!--      }, 50);-->
+<!--    });-->
+<!--</script>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Dashboard Escolar - Senai Java</title>-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          background-color: #f8f9fa;-->
+<!--        }-->
+<!--        .navbar {-->
+<!--          padding: 10px;-->
+<!--        }-->
+<!--        .dashboard-card {-->
+<!--          border-radius: 12px;-->
+<!--          box-shadow: 0 4px 10px rgba(0,0,0,0.1);-->
+<!--          transition: transform 0.2s ease;-->
+<!--        }-->
+<!--        .dashboard-card:hover {-->
+<!--          transform: scale(1.03);-->
+<!--        }-->
+<!--        .counter {-->
+<!--          font-size: 2.5rem;-->
+<!--          font-weight: bold;-->
+<!--          color: #dc3545;-->
+<!--        }-->
+<!--        .shortcut-btn {-->
+<!--          min-width: 150px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; Navbar &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-danger">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="#">-->
+<!--            <img src="https://desenvolveitapevi.wordpress.com/wp-content/uploads/2016/02/logo-senai1.png" alt="Logo Senai" height="60">-->
+<!--        </a>-->
+<!--        <h5 class="text-white ms-2">Dashboard Escolar</h5>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--<div class="container-fluid mt-4">-->
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash; Card Alunos &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Alunos</h4>-->
+<!--                <p class="counter" data-target="350">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Professores &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Professores</h4>-->
+<!--                <p class="counter" data-target="25">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Cursos &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Cursos</h4>-->
+<!--                <p class="counter" data-target="12">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Card Turmas &ndash;&gt;-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Turmas</h4>-->
+<!--                <p class="counter" data-target="18">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Gráfico com filtros &ndash;&gt;-->
+<!--    <div class="row mt-4">-->
+<!--        <div class="col-md-12">-->
+<!--            <div class="card dashboard-card p-4">-->
+<!--                <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center">-->
+<!--                    <h4>Matrículas por Mês</h4>-->
+<!--                    <div class="d-flex gap-2">-->
+<!--                        <select id="anoSelect" class="form-select">-->
+<!--                            <option value="2023">Ano 2023</option>-->
+<!--                            <option value="2024" selected>Ano 2024</option>-->
+<!--                            <option value="2025">Ano 2025</option>-->
+<!--                        </select>-->
+<!--                        <select id="tipoGrafico" class="form-select">-->
+<!--                            <option value="line" selected>Linha</option>-->
+<!--                            <option value="bar">Barras</option>-->
+<!--                            <option value="pie">Pizza</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <canvas id="matriculasChart" height="100"></canvas>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Atalhos do Sistema &ndash;&gt;-->
+<!--    <div class="row mt-5 text-center">-->
+<!--        <h4>Atalhos do Sistema</h4>-->
+<!--        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">-->
+<!--            <a href="./aluno.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Alunos</a>-->
+<!--            <a href="./professor.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Professores</a>-->
+<!--            <a href="./curso.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Cursos</a>-->
+<!--            <a href="./turma.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Turmas</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    // Dados de exemplo por ano-->
+<!--    const dadosMatriculas = {-->
+<!--      2023: [50, 60, 80, 90, 100, 120, 150, 130, 140, 160, 170, 180],-->
+<!--      2024: [70, 75, 90, 100, 120, 150, 170, 160, 180, 200, 210, 220],-->
+<!--      2025: [80, 85, 95, 110, 130, 160, 190, 180, 200, 220, 230, 250]-->
+<!--    };-->
+
+<!--    const ctx = document.getElementById('matriculasChart').getContext('2d');-->
+
+<!--    let matriculasChart = new Chart(ctx, {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--        labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],-->
+<!--        datasets: [{-->
+<!--          label: 'Matrículas',-->
+<!--          data: dadosMatriculas[2024],-->
+<!--          borderColor: 'rgba(220,53,69,1)',-->
+<!--          backgroundColor: 'rgba(220,53,69,0.3)',-->
+<!--          borderWidth: 2,-->
+<!--          tension: 0.3,-->
+<!--          fill: true-->
+<!--        }]-->
+<!--      },-->
+<!--      options: {-->
+<!--        responsive: true,-->
+<!--        plugins: {-->
+<!--          legend: { display: true }-->
+<!--        }-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Atualizar gráfico-->
+<!--    function atualizarGrafico() {-->
+<!--      const anoSelecionado = document.getElementById('anoSelect').value;-->
+<!--      const tipoSelecionado = document.getElementById('tipoGrafico').value;-->
+
+<!--      matriculasChart.destroy();-->
+<!--      matriculasChart = new Chart(ctx, {-->
+<!--        type: tipoSelecionado,-->
+<!--        data: {-->
+<!--          labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],-->
+<!--          datasets: [{-->
+<!--            label: 'Matrículas',-->
+<!--            data: dadosMatriculas[anoSelecionado],-->
+<!--            borderColor: 'rgba(220,53,69,1)',-->
+<!--            backgroundColor: tipoSelecionado === 'pie'-->
+<!--              ? ['#dc3545','#fd7e14','#ffc107','#20c997','#0dcaf0','#0d6efd','#6610f2','#6f42c1','#d63384','#198754','#212529','#adb5bd']-->
+<!--              : 'rgba(220,53,69,0.3)',-->
+<!--            borderWidth: 2,-->
+<!--            tension: 0.3,-->
+<!--            fill: tipoSelecionado === 'line'-->
+<!--          }]-->
+<!--        },-->
+<!--        options: {-->
+<!--          responsive: true,-->
+<!--          plugins: { legend: { display: true } }-->
+<!--        }-->
+<!--      });-->
+<!--    }-->
+
+<!--    document.getElementById('anoSelect').addEventListener('change', atualizarGrafico);-->
+<!--    document.getElementById('tipoGrafico').addEventListener('change', atualizarGrafico);-->
+
+<!--    // Contador animado-->
+<!--    document.querySelectorAll('.counter').forEach(counter => {-->
+<!--      const target = +counter.getAttribute('data-target');-->
+<!--      let count = 0;-->
+<!--      const increment = target / 50;-->
+<!--      const interval = setInterval(() => {-->
+<!--        count += increment;-->
+<!--        if (count >= target) {-->
+<!--          counter.textContent = target;-->
+<!--          clearInterval(interval);-->
+<!--        } else {-->
+<!--          counter.textContent = Math.ceil(count);-->
+<!--        }-->
+<!--      }, 50);-->
+<!--    });-->
+<!--</script>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-br">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Dashboard Escolar - Senai Java</title>-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Chart.js &ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+
+<!--    <style>-->
+<!--        body {-->
+<!--          background-color: #f8f9fa;-->
+<!--        }-->
+<!--        .navbar {-->
+<!--          padding: 10px;-->
+<!--        }-->
+<!--        .dashboard-card {-->
+<!--          border-radius: 12px;-->
+<!--          box-shadow: 0 4px 10px rgba(0,0,0,0.1);-->
+<!--          transition: transform 0.2s ease;-->
+<!--        }-->
+<!--        .dashboard-card:hover {-->
+<!--          transform: scale(1.03);-->
+<!--        }-->
+<!--        .counter {-->
+<!--          font-size: 2.5rem;-->
+<!--          font-weight: bold;-->
+<!--          color: #dc3545;-->
+<!--        }-->
+<!--        .shortcut-btn {-->
+<!--          min-width: 150px;-->
+<!--        }-->
+<!--        .alert-card {-->
+<!--          border-left: 6px solid;-->
+<!--          padding: 15px;-->
+<!--          border-radius: 10px;-->
+<!--          margin-bottom: 15px;-->
+<!--          box-shadow: 0 2px 6px rgba(0,0,0,0.1);-->
+<!--        }-->
+<!--        .alert-danger { border-color: #dc3545; background-color: #f8d7da; }-->
+<!--        .alert-warning { border-color: #ffc107; background-color: #fff3cd; }-->
+<!--        .alert-info { border-color: #0dcaf0; background-color: #cff4fc; }-->
+<!--        .alert-success { border-color: #198754; background-color: #d1e7dd; }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; Navbar &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-danger">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="#">-->
+<!--            <img src="https://desenvolveitapevi.wordpress.com/wp-content/uploads/2016/02/logo-senai1.png" alt="Logo Senai" height="60">-->
+<!--        </a>-->
+<!--        <h5 class="text-white ms-2">Dashboard Escolar</h5>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--<div class="container-fluid mt-4">-->
+
+<!--    &lt;!&ndash; Notificações &ndash;&gt;-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-12">-->
+<!--            <h4>🔔 Notificações Recentes</h4>-->
+
+<!--            <div class="alert-card alert-danger">-->
+<!--                <strong>3 alunos</strong> ainda não confirmaram matrícula.-->
+<!--            </div>-->
+<!--            <div class="alert-card alert-warning">-->
+<!--                <strong>2 professores</strong> sem turmas atribuídas.-->
+<!--            </div>-->
+<!--            <div class="alert-card alert-info">-->
+<!--                <strong>Curso de Java</strong> atingiu 95% das vagas.-->
+<!--            </div>-->
+<!--            <div class="alert-card alert-success">-->
+<!--                <strong>10 alunos</strong> foram aprovados em certificações externas.-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Cards Resumo &ndash;&gt;-->
+<!--    <div class="row mt-4">-->
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Alunos</h4>-->
+<!--                <p class="counter" data-target="350">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Professores</h4>-->
+<!--                <p class="counter" data-target="25">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Cursos</h4>-->
+<!--                <p class="counter" data-target="12">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-3 mb-4">-->
+<!--            <div class="card dashboard-card text-center p-3">-->
+<!--                <h4>Turmas</h4>-->
+<!--                <p class="counter" data-target="18">0</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Gráfico com filtros &ndash;&gt;-->
+<!--    <div class="row mt-4">-->
+<!--        <div class="col-md-12">-->
+<!--            <div class="card dashboard-card p-4">-->
+<!--                <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center">-->
+<!--                    <h4>Matrículas por Mês</h4>-->
+<!--                    <div class="d-flex gap-2">-->
+<!--                        <select id="anoSelect" class="form-select">-->
+<!--                            <option value="2023">Ano 2023</option>-->
+<!--                            <option value="2024" selected>Ano 2024</option>-->
+<!--                            <option value="2025">Ano 2025</option>-->
+<!--                        </select>-->
+<!--                        <select id="tipoGrafico" class="form-select">-->
+<!--                            <option value="line" selected>Linha</option>-->
+<!--                            <option value="bar">Barras</option>-->
+<!--                            <option value="pie">Pizza</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <canvas id="matriculasChart" height="100"></canvas>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Atalhos do Sistema &ndash;&gt;-->
+<!--    <div class="row mt-5 text-center">-->
+<!--        <h4>Atalhos do Sistema</h4>-->
+<!--        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">-->
+<!--            <a href="./aluno.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Alunos</a>-->
+<!--            <a href="./professor.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Professores</a>-->
+<!--            <a href="./curso.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Cursos</a>-->
+<!--            <a href="./turma.html" class="btn btn-outline-danger shortcut-btn">Gerenciar Turmas</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    // Dados de exemplo por ano-->
+<!--    const dadosMatriculas = {-->
+<!--      2023: [50, 60, 80, 90, 100, 120, 150, 130, 140, 160, 170, 180],-->
+<!--      2024: [70, 75, 90, 100, 120, 150, 170, 160, 180, 200, 210, 220],-->
+<!--      2025: [80, 85, 95, 110, 130, 160, 190, 180, 200, 220, 230, 250]-->
+<!--    };-->
+
+<!--    const ctx = document.getElementById('matriculasChart').getContext('2d');-->
+
+<!--    let matriculasChart = new Chart(ctx, {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--        labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],-->
+<!--        datasets: [{-->
+<!--          label: 'Matrículas',-->
+<!--          data: dadosMatriculas[2024],-->
+<!--          borderColor: 'rgba(220,53,69,1)',-->
+<!--          backgroundColor: 'rgba(220,53,69,0.3)',-->
+<!--          borderWidth: 2,-->
+<!--          tension: 0.3,-->
+<!--          fill: true-->
+<!--        }]-->
+<!--      },-->
+<!--      options: { responsive: true }-->
+<!--    });-->
+
+<!--    // Atualizar gráfico-->
+<!--    function atualizarGrafico() {-->
+<!--      const anoSelecionado = document.getElementById('anoSelect').value;-->
+<!--      const tipoSelecionado = document.getElementById('tipoGrafico').value;-->
+
+<!--      matriculasChart.destroy();-->
+<!--      matriculasChart = new Chart(ctx, {-->
+<!--        type: tipoSelecionado,-->
+<!--        data: {-->
+<!--          labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],-->
+<!--          datasets: [{-->
+<!--            label: 'Matrículas',-->
+<!--            data: dadosMatriculas[anoSelecionado],-->
+<!--            borderColor: 'rgba(220,53,69,1)',-->
+<!--            backgroundColor: tipoSelecionado === 'pie'-->
+<!--              ? ['#dc3545','#fd7e14','#ffc107','#20c997','#0dcaf0','#0d6efd','#6610f2','#6f42c1','#d63384','#198754','#212529','#adb5bd']-->
+<!--              : 'rgba(220,53,69,0.3)',-->
+<!--            borderWidth: 2,-->
+<!--            tension: 0.3,-->
+<!--            fill: tipoSelecionado === 'line'-->
+<!--          }]-->
+<!--        },-->
+<!--        options: { responsive: true }-->
+<!--      });-->
+<!--    }-->
+
+<!--    document.getElementById('anoSelect').addEventListener('change', atualizarGrafico);-->
+<!--    document.getElementById('tipoGrafico').addEventListener('change', atualizarGrafico);-->
+
+<!--    // Contador animado-->
+<!--    document.querySelectorAll('.counter').forEach(counter => {-->
+<!--      const target = +counter.getAttribute('data-target');-->
+<!--      let count = 0;-->
+<!--      const increment = target / 50;-->
+<!--      const interval = setInterval(() => {-->
+<!--        count += increment;-->
+<!--        if (count >= target) {-->
+<!--          counter.textContent = target;-->
+<!--          clearInterval(interval);-->
+<!--        } else {-->
+<!--          counter.textContent = Math.ceil(count);-->
+<!--        }-->
+<!--      }, 50);-->
+<!--    });-->
+<!--</script>-->
+
+<!--&lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="pt-BR">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Dashboard Escolar</title>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--    <style>-->
+<!--        * { margin: 0; padding: 0; box-sizing: border-box; }-->
+<!--        body { font-family: Arial, sans-serif; background: #f5f5f5; color: #333; }-->
+
+<!--        header {-->
+<!--          background: #e30613;-->
+<!--          color: white;-->
+<!--          padding: 1rem;-->
+<!--          text-align: center;-->
+<!--          font-size: 1.5rem;-->
+<!--          font-weight: bold;-->
+<!--        }-->
+
+<!--        main { padding: 20px; }-->
+
+<!--        /* Cards */-->
+<!--        .cards {-->
+<!--          display: grid;-->
+<!--          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));-->
+<!--          gap: 20px;-->
+<!--          margin-bottom: 30px;-->
+<!--        }-->
+<!--        .card {-->
+<!--          background: white;-->
+<!--          padding: 20px;-->
+<!--          border-radius: 12px;-->
+<!--          box-shadow: 0 4px 6px rgba(0,0,0,0.1);-->
+<!--          text-align: center;-->
+<!--          transition: transform 0.2s;-->
+<!--        }-->
+<!--        .card:hover { transform: translateY(-5px); }-->
+<!--        .card h2 { font-size: 2rem; margin-bottom: 10px; color: #e30613; }-->
+<!--        .card p { font-size: 1rem; font-weight: bold; }-->
+
+<!--        /* Filtro */-->
+<!--        .filter {-->
+<!--          margin-bottom: 20px;-->
+<!--          text-align: center;-->
+<!--        }-->
+<!--        .filter select {-->
+<!--          padding: 8px 12px;-->
+<!--          border-radius: 6px;-->
+<!--          border: 1px solid #ccc;-->
+<!--          font-size: 1rem;-->
+<!--        }-->
+
+<!--        /* Gráfico */-->
+<!--        .chart-container {-->
+<!--          background: white;-->
+<!--          padding: 20px;-->
+<!--          border-radius: 12px;-->
+<!--          box-shadow: 0 4px 6px rgba(0,0,0,0.1);-->
+<!--          margin-bottom: 30px;-->
+<!--        }-->
+
+<!--        /* Notificações */-->
+<!--        .alerts {-->
+<!--          background: white;-->
+<!--          padding: 20px;-->
+<!--          border-radius: 12px;-->
+<!--          box-shadow: 0 4px 6px rgba(0,0,0,0.1);-->
+<!--        }-->
+<!--        .alerts h3 { margin-bottom: 10px; color: #e30613; }-->
+<!--        .alert {-->
+<!--          background: #ffe6e6;-->
+<!--          padding: 10px;-->
+<!--          margin: 8px 0;-->
+<!--          border-radius: 8px;-->
+<!--          border-left: 5px solid #e30613;-->
+<!--          font-size: 0.95rem;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<header>📊 Dashboard Escolar - SENAI</header>-->
+
+<!--<main>-->
+<!--    &lt;!&ndash; Cards &ndash;&gt;-->
+<!--    <section class="cards">-->
+<!--        <div class="card">-->
+<!--            <h2 id="matriculas">120</h2>-->
+<!--            <p>Matrículas Ativas</p>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <h2 id="pendentes">3</h2>-->
+<!--            <p>Pendentes</p>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <h2 id="professores">15</h2>-->
+<!--            <p>Professores</p>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <h2 id="cursos">8</h2>-->
+<!--            <p>Cursos</p>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<!--    &lt;!&ndash; Filtro &ndash;&gt;-->
+<!--    <section class="filter">-->
+<!--        <label for="ano">Selecione o Ano: </label>-->
+<!--        <select id="ano">-->
+<!--            <option value="2025">2025</option>-->
+<!--            <option value="2024">2024</option>-->
+<!--            <option value="2023">2023</option>-->
+<!--        </select>-->
+<!--    </section>-->
+
+<!--    &lt;!&ndash; Gráfico &ndash;&gt;-->
+<!--    <section class="chart-container">-->
+<!--        <canvas id="graficoMatriculas"></canvas>-->
+<!--    </section>-->
+
+<!--    &lt;!&ndash; Notificações &ndash;&gt;-->
+<!--    <section class="alerts">-->
+<!--        <h3>🔔 Notificações</h3>-->
+<!--        <div class="alert">3 alunos pendentes de matrícula</div>-->
+<!--        <div class="alert">Novo curso de Tecnologia cadastrado</div>-->
+<!--        <div class="alert">Professor João aguardando aprovação</div>-->
+<!--    </section>-->
+<!--</main>-->
+
+<!--<script>-->
+<!--    // Dados simulados por ano-->
+<!--    const dadosMatriculas = {-->
+<!--      2025: [12, 25, 40, 60, 80, 95, 100, 105, 110, 115, 118, 120],-->
+<!--      2024: [10, 20, 30, 50, 70, 85, 90, 95, 100, 105, 108, 110],-->
+<!--      2023: [8, 15, 25, 35, 50, 65, 70, 75, 80, 90, 95, 100]-->
+<!--    };-->
+
+<!--    // Configuração do gráfico-->
+<!--    const ctx = document.getElementById('graficoMatriculas');-->
+<!--    let grafico = new Chart(ctx, {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--        labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],-->
+<!--        datasets: [{-->
+<!--          label: "Matrículas",-->
+<!--          data: dadosMatriculas[2025],-->
+<!--          borderColor: "#e30613",-->
+<!--          backgroundColor: "rgba(227,6,19,0.2)",-->
+<!--          fill: true,-->
+<!--          tension: 0.3-->
+<!--        }]-->
+<!--      },-->
+<!--      options: { responsive: true, plugins: { legend: { position: 'top' } } }-->
+<!--    });-->
+
+<!--    // Atualizar gráfico ao mudar ano-->
+<!--    document.getElementById('ano').addEventListener('change', (e) => {-->
+<!--      const ano = e.target.value;-->
+<!--      grafico.data.datasets[0].data = dadosMatriculas[ano];-->
+<!--      grafico.update();-->
+<!--    });-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
